@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4082A5B198BA6030034DF80 /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4082A59198BA6030034DF80 /* WorkViewController.m */; };
+		B4082A5C198BA6030034DF80 /* WorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4082A5A198BA6030034DF80 /* WorkViewController.xib */; };
+		B4082A61198BAFCA0034DF80 /* WorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4082A5F198BAFCA0034DF80 /* WorkCell.m */; };
+		B4082A62198BAFCA0034DF80 /* WorkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4082A60198BAFCA0034DF80 /* WorkCell.xib */; };
+		B45A0CC2198A35340022F8CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CC1198A35340022F8CD /* Foundation.framework */; };
+		B45A0CC4198A35340022F8CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CC3198A35340022F8CD /* CoreGraphics.framework */; };
+		B45A0CC6198A35340022F8CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CC5198A35340022F8CD /* UIKit.framework */; };
+		B45A0CCC198A35340022F8CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45A0CCA198A35340022F8CD /* InfoPlist.strings */; };
+		B45A0CCE198A35340022F8CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B45A0CCD198A35340022F8CD /* main.m */; };
+		B45A0CD2198A35340022F8CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B45A0CD1198A35340022F8CD /* AppDelegate.m */; };
+		B45A0CD4198A35340022F8CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45A0CD3198A35340022F8CD /* Images.xcassets */; };
+		B45A0CDB198A35340022F8CD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CDA198A35340022F8CD /* XCTest.framework */; };
+		B45A0CDC198A35340022F8CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CC1198A35340022F8CD /* Foundation.framework */; };
+		B45A0CDD198A35340022F8CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CC5198A35340022F8CD /* UIKit.framework */; };
+		B45A0CE5198A35340022F8CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45A0CE3198A35340022F8CD /* InfoPlist.strings */; };
+		B45A0CE7198A35340022F8CD /* OpenDoorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B45A0CE6198A35340022F8CD /* OpenDoorTests.m */; };
+		B45A0CF1198A35CD0022F8CD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CF0198A35CD0022F8CD /* Parse.framework */; };
+		B45A0CF3198A36360022F8CD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CF2198A36360022F8CD /* Security.framework */; };
+		B45A0CF5198A364C0022F8CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CF4198A364C0022F8CD /* SystemConfiguration.framework */; };
+		B45A0CF7198A36520022F8CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CF6198A36520022F8CD /* CFNetwork.framework */; };
+		B45A0CF9198A36660022F8CD /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CF8198A36650022F8CD /* libz.1.1.3.dylib */; };
+		B45A0CFE198A37730022F8CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45A0CFC198A37730022F8CD /* LoginViewController.m */; };
+		B45A0CFF198A37730022F8CD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45A0CFD198A37730022F8CD /* LoginViewController.xib */; };
+		B46E4CCD198A9CB900A60599 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B46E4CCC198A9CB900A60599 /* Util.m */; };
+		B471F0E4198B909000A95D0B /* btn-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0E0198B909000A95D0B /* btn-bg.png */; };
+		B471F0E5198B909000A95D0B /* btn-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0E1198B909000A95D0B /* btn-bg@2x.png */; };
+		B471F0EE198B996900A95D0B /* work-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0EC198B996900A95D0B /* work-icon.png */; };
+		B471F0EF198B996900A95D0B /* work-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0ED198B996900A95D0B /* work-icon@2x.png */; };
+		B471F0F2198B9BC400A95D0B /* account-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0F0198B9BC400A95D0B /* account-icon.png */; };
+		B471F0F3198B9BC400A95D0B /* account-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0F1198B9BC400A95D0B /* account-icon@2x.png */; };
+		B471F0FA198B9C7F00A95D0B /* message-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0F8198B9C7F00A95D0B /* message-icon.png */; };
+		B471F0FB198B9C7F00A95D0B /* message-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0F9198B9C7F00A95D0B /* message-icon@2x.png */; };
+		B4A55480198A4D6A003329FE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5547F198A4D6A003329FE /* StoreKit.framework */; };
+		B4A55482198A4D6F003329FE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A55481198A4D6F003329FE /* CoreLocation.framework */; };
+		B4A55484198A4DC8003329FE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A55483198A4DC8003329FE /* MobileCoreServices.framework */; };
+		B4A5548A198A4E52003329FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A55489198A4E52003329FE /* QuartzCore.framework */; };
+		B4A5548C198A4E65003329FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5548B198A4E65003329FE /* AudioToolbox.framework */; };
+		B4A5548E198A5088003329FE /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4A5548D198A5088003329FE /* Entitlements.plist */; };
+		B4DBB2E9198B71A300A9ED32 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBB2E7198B71A300A9ED32 /* AccountViewController.m */; };
+		B4DBB2EA198B71A300A9ED32 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DBB2E8198B71A300A9ED32 /* AccountViewController.xib */; };
+		B4DBB2EE198B71B000A9ED32 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBB2EC198B71B000A9ED32 /* MessagesViewController.m */; };
+		B4DBB2EF198B71B000A9ED32 /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DBB2ED198B71B000A9ED32 /* MessagesViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B45A0CDE198A35340022F8CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B45A0CB6198A35340022F8CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B45A0CBD198A35340022F8CD;
+			remoteInfo = OpenDoor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B4082A58198BA6030034DF80 /* WorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
+		B4082A59198BA6030034DF80 /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
+		B4082A5A198BA6030034DF80 /* WorkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkViewController.xib; sourceTree = "<group>"; };
+		B4082A5E198BAFCA0034DF80 /* WorkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkCell.h; sourceTree = "<group>"; };
+		B4082A5F198BAFCA0034DF80 /* WorkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkCell.m; sourceTree = "<group>"; };
+		B4082A60198BAFCA0034DF80 /* WorkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkCell.xib; sourceTree = "<group>"; };
+		B45A0CBE198A35340022F8CD /* OpenDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45A0CC1198A35340022F8CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B45A0CC3198A35340022F8CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B45A0CC5198A35340022F8CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B45A0CC9198A35340022F8CD /* OpenDoor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenDoor-Info.plist"; sourceTree = "<group>"; };
+		B45A0CCB198A35340022F8CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B45A0CCD198A35340022F8CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B45A0CCF198A35340022F8CD /* OpenDoor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenDoor-Prefix.pch"; sourceTree = "<group>"; };
+		B45A0CD0198A35340022F8CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B45A0CD1198A35340022F8CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B45A0CD3198A35340022F8CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B45A0CD9198A35340022F8CD /* OpenDoorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenDoorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45A0CDA198A35340022F8CD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B45A0CE2198A35340022F8CD /* OpenDoorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenDoorTests-Info.plist"; sourceTree = "<group>"; };
+		B45A0CE4198A35340022F8CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B45A0CE6198A35340022F8CD /* OpenDoorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenDoorTests.m; sourceTree = "<group>"; };
+		B45A0CF0198A35CD0022F8CD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B45A0CF2198A36360022F8CD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B45A0CF4198A364C0022F8CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B45A0CF6198A36520022F8CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B45A0CF8198A36650022F8CD /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		B45A0CFB198A37730022F8CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B45A0CFC198A37730022F8CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B45A0CFD198A37730022F8CD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B46E4CCB198A9CB900A60599 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		B46E4CCC198A9CB900A60599 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		B471F0E0198B909000A95D0B /* btn-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg.png"; sourceTree = "<group>"; };
+		B471F0E1198B909000A95D0B /* btn-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg@2x.png"; sourceTree = "<group>"; };
+		B471F0EC198B996900A95D0B /* work-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "work-icon.png"; sourceTree = "<group>"; };
+		B471F0ED198B996900A95D0B /* work-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "work-icon@2x.png"; sourceTree = "<group>"; };
+		B471F0F0198B9BC400A95D0B /* account-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account-icon.png"; sourceTree = "<group>"; };
+		B471F0F1198B9BC400A95D0B /* account-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account-icon@2x.png"; sourceTree = "<group>"; };
+		B471F0F8198B9C7F00A95D0B /* message-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message-icon.png"; sourceTree = "<group>"; };
+		B471F0F9198B9C7F00A95D0B /* message-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message-icon@2x.png"; sourceTree = "<group>"; };
+		B4A5547F198A4D6A003329FE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B4A55481198A4D6F003329FE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B4A55483198A4DC8003329FE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B4A55485198A4DD7003329FE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		B4A55487198A4DEF003329FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B4A55489198A4E52003329FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B4A5548B198A4E65003329FE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B4A5548D198A5088003329FE /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		B4DBB2E6198B71A300A9ED32 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		B4DBB2E7198B71A300A9ED32 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		B4DBB2E8198B71A300A9ED32 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		B4DBB2EB198B71B000A9ED32 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		B4DBB2EC198B71B000A9ED32 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		B4DBB2ED198B71B000A9ED32 /* MessagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagesViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B45A0CBB198A35340022F8CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A5548C198A4E65003329FE /* AudioToolbox.framework in Frameworks */,
+				B4A5548A198A4E52003329FE /* QuartzCore.framework in Frameworks */,
+				B45A0CC4198A35340022F8CD /* CoreGraphics.framework in Frameworks */,
+				B4A55484198A4DC8003329FE /* MobileCoreServices.framework in Frameworks */,
+				B4A55482198A4D6F003329FE /* CoreLocation.framework in Frameworks */,
+				B4A55480198A4D6A003329FE /* StoreKit.framework in Frameworks */,
+				B45A0CF9198A36660022F8CD /* libz.1.1.3.dylib in Frameworks */,
+				B45A0CF7198A36520022F8CD /* CFNetwork.framework in Frameworks */,
+				B45A0CF5198A364C0022F8CD /* SystemConfiguration.framework in Frameworks */,
+				B45A0CF3198A36360022F8CD /* Security.framework in Frameworks */,
+				B45A0CC6198A35340022F8CD /* UIKit.framework in Frameworks */,
+				B45A0CF1198A35CD0022F8CD /* Parse.framework in Frameworks */,
+				B45A0CC2198A35340022F8CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45A0CD6198A35340022F8CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45A0CDB198A35340022F8CD /* XCTest.framework in Frameworks */,
+				B45A0CDD198A35340022F8CD /* UIKit.framework in Frameworks */,
+				B45A0CDC198A35340022F8CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4082A5D198BAF840034DF80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4082A5E198BAFCA0034DF80 /* WorkCell.h */,
+				B4082A5F198BAFCA0034DF80 /* WorkCell.m */,
+				B4082A60198BAFCA0034DF80 /* WorkCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		B45A0CB5198A35340022F8CD = {
+			isa = PBXGroup;
+			children = (
+				B45A0CC7198A35340022F8CD /* OpenDoor */,
+				B45A0CE0198A35340022F8CD /* OpenDoorTests */,
+				B45A0CC0198A35340022F8CD /* Frameworks */,
+				B45A0CBF198A35340022F8CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B45A0CBF198A35340022F8CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B45A0CBE198A35340022F8CD /* OpenDoor.app */,
+				B45A0CD9198A35340022F8CD /* OpenDoorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B45A0CC0198A35340022F8CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4A5548B198A4E65003329FE /* AudioToolbox.framework */,
+				B4A55489198A4E52003329FE /* QuartzCore.framework */,
+				B4A55487198A4DEF003329FE /* CoreData.framework */,
+				B4A55485198A4DD7003329FE /* CoreFoundation.framework */,
+				B4A55483198A4DC8003329FE /* MobileCoreServices.framework */,
+				B4A55481198A4D6F003329FE /* CoreLocation.framework */,
+				B4A5547F198A4D6A003329FE /* StoreKit.framework */,
+				B45A0CF8198A36650022F8CD /* libz.1.1.3.dylib */,
+				B45A0CF6198A36520022F8CD /* CFNetwork.framework */,
+				B45A0CF4198A364C0022F8CD /* SystemConfiguration.framework */,
+				B45A0CF2198A36360022F8CD /* Security.framework */,
+				B45A0CF0198A35CD0022F8CD /* Parse.framework */,
+				B45A0CC1198A35340022F8CD /* Foundation.framework */,
+				B45A0CC3198A35340022F8CD /* CoreGraphics.framework */,
+				B45A0CC5198A35340022F8CD /* UIKit.framework */,
+				B45A0CDA198A35340022F8CD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B45A0CC7198A35340022F8CD /* OpenDoor */ = {
+			isa = PBXGroup;
+			children = (
+				B46E4CC7198A9BC100A60599 /* Util */,
+				B45A0CFA198A37680022F8CD /* UI */,
+				B45A0CD0198A35340022F8CD /* AppDelegate.h */,
+				B45A0CD1198A35340022F8CD /* AppDelegate.m */,
+				B45A0CD3198A35340022F8CD /* Images.xcassets */,
+				B45A0CC8198A35340022F8CD /* Supporting Files */,
+			);
+			path = OpenDoor;
+			sourceTree = "<group>";
+		};
+		B45A0CC8198A35340022F8CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B484D57B198B5D7800CF2B13 /* imgs */,
+				B4A5548D198A5088003329FE /* Entitlements.plist */,
+				B45A0CC9198A35340022F8CD /* OpenDoor-Info.plist */,
+				B45A0CCA198A35340022F8CD /* InfoPlist.strings */,
+				B45A0CCD198A35340022F8CD /* main.m */,
+				B45A0CCF198A35340022F8CD /* OpenDoor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B45A0CE0198A35340022F8CD /* OpenDoorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B45A0CE6198A35340022F8CD /* OpenDoorTests.m */,
+				B45A0CE1198A35340022F8CD /* Supporting Files */,
+			);
+			path = OpenDoorTests;
+			sourceTree = "<group>";
+		};
+		B45A0CE1198A35340022F8CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B45A0CE2198A35340022F8CD /* OpenDoorTests-Info.plist */,
+				B45A0CE3198A35340022F8CD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B45A0CFA198A37680022F8CD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B4DBB28B198B64A000A9ED32 /* Login */,
+				B4DBB28C198B64AF00A9ED32 /* Work */,
+				B4DBB2DF198B714D00A9ED32 /* Account */,
+				B4DBB2E0198B715200A9ED32 /* Messages */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B46E4CC7198A9BC100A60599 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B46E4CCB198A9CB900A60599 /* Util.h */,
+				B46E4CCC198A9CB900A60599 /* Util.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		B484D57B198B5D7800CF2B13 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				B471F0F8198B9C7F00A95D0B /* message-icon.png */,
+				B471F0F9198B9C7F00A95D0B /* message-icon@2x.png */,
+				B471F0F0198B9BC400A95D0B /* account-icon.png */,
+				B471F0F1198B9BC400A95D0B /* account-icon@2x.png */,
+				B471F0EC198B996900A95D0B /* work-icon.png */,
+				B471F0ED198B996900A95D0B /* work-icon@2x.png */,
+				B471F0E0198B909000A95D0B /* btn-bg.png */,
+				B471F0E1198B909000A95D0B /* btn-bg@2x.png */,
+			);
+			path = imgs;
+			sourceTree = "<group>";
+		};
+		B4DBB28B198B64A000A9ED32 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B45A0CFB198A37730022F8CD /* LoginViewController.h */,
+				B45A0CFC198A37730022F8CD /* LoginViewController.m */,
+				B45A0CFD198A37730022F8CD /* LoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		B4DBB28C198B64AF00A9ED32 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				B4082A5D198BAF840034DF80 /* Cell */,
+				B4082A58198BA6030034DF80 /* WorkViewController.h */,
+				B4082A59198BA6030034DF80 /* WorkViewController.m */,
+				B4082A5A198BA6030034DF80 /* WorkViewController.xib */,
+			);
+			name = Work;
+			sourceTree = "<group>";
+		};
+		B4DBB2DF198B714D00A9ED32 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				B4DBB2E6198B71A300A9ED32 /* AccountViewController.h */,
+				B4DBB2E7198B71A300A9ED32 /* AccountViewController.m */,
+				B4DBB2E8198B71A300A9ED32 /* AccountViewController.xib */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		B4DBB2E0198B715200A9ED32 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				B4DBB2EB198B71B000A9ED32 /* MessagesViewController.h */,
+				B4DBB2EC198B71B000A9ED32 /* MessagesViewController.m */,
+				B4DBB2ED198B71B000A9ED32 /* MessagesViewController.xib */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B45A0CBD198A35340022F8CD /* OpenDoor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45A0CEA198A35340022F8CD /* Build configuration list for PBXNativeTarget "OpenDoor" */;
+			buildPhases = (
+				B45A0CBA198A35340022F8CD /* Sources */,
+				B45A0CBB198A35340022F8CD /* Frameworks */,
+				B45A0CBC198A35340022F8CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenDoor;
+			productName = OpenDoor;
+			productReference = B45A0CBE198A35340022F8CD /* OpenDoor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B45A0CD8198A35340022F8CD /* OpenDoorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45A0CED198A35340022F8CD /* Build configuration list for PBXNativeTarget "OpenDoorTests" */;
+			buildPhases = (
+				B45A0CD5198A35340022F8CD /* Sources */,
+				B45A0CD6198A35340022F8CD /* Frameworks */,
+				B45A0CD7198A35340022F8CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B45A0CDF198A35340022F8CD /* PBXTargetDependency */,
+			);
+			name = OpenDoorTests;
+			productName = OpenDoorTests;
+			productReference = B45A0CD9198A35340022F8CD /* OpenDoorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B45A0CB6198A35340022F8CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Junaid's";
+				TargetAttributes = {
+					B45A0CD8198A35340022F8CD = {
+						TestTargetID = B45A0CBD198A35340022F8CD;
+					};
+				};
+			};
+			buildConfigurationList = B45A0CB9198A35340022F8CD /* Build configuration list for PBXProject "OpenDoor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B45A0CB5198A35340022F8CD;
+			productRefGroup = B45A0CBF198A35340022F8CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B45A0CBD198A35340022F8CD /* OpenDoor */,
+				B45A0CD8198A35340022F8CD /* OpenDoorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B45A0CBC198A35340022F8CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A5548E198A5088003329FE /* Entitlements.plist in Resources */,
+				B45A0CCC198A35340022F8CD /* InfoPlist.strings in Resources */,
+				B471F0E4198B909000A95D0B /* btn-bg.png in Resources */,
+				B471F0E5198B909000A95D0B /* btn-bg@2x.png in Resources */,
+				B471F0F3198B9BC400A95D0B /* account-icon@2x.png in Resources */,
+				B45A0CD4198A35340022F8CD /* Images.xcassets in Resources */,
+				B471F0FA198B9C7F00A95D0B /* message-icon.png in Resources */,
+				B471F0EE198B996900A95D0B /* work-icon.png in Resources */,
+				B4082A5C198BA6030034DF80 /* WorkViewController.xib in Resources */,
+				B4DBB2EF198B71B000A9ED32 /* MessagesViewController.xib in Resources */,
+				B471F0FB198B9C7F00A95D0B /* message-icon@2x.png in Resources */,
+				B4DBB2EA198B71A300A9ED32 /* AccountViewController.xib in Resources */,
+				B471F0F2198B9BC400A95D0B /* account-icon.png in Resources */,
+				B471F0EF198B996900A95D0B /* work-icon@2x.png in Resources */,
+				B45A0CFF198A37730022F8CD /* LoginViewController.xib in Resources */,
+				B4082A62198BAFCA0034DF80 /* WorkCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45A0CD7198A35340022F8CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45A0CE5198A35340022F8CD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B45A0CBA198A35340022F8CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46E4CCD198A9CB900A60599 /* Util.m in Sources */,
+				B45A0CD2198A35340022F8CD /* AppDelegate.m in Sources */,
+				B4DBB2EE198B71B000A9ED32 /* MessagesViewController.m in Sources */,
+				B4082A5B198BA6030034DF80 /* WorkViewController.m in Sources */,
+				B4DBB2E9198B71A300A9ED32 /* AccountViewController.m in Sources */,
+				B45A0CCE198A35340022F8CD /* main.m in Sources */,
+				B45A0CFE198A37730022F8CD /* LoginViewController.m in Sources */,
+				B4082A61198BAFCA0034DF80 /* WorkCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45A0CD5198A35340022F8CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45A0CE7198A35340022F8CD /* OpenDoorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B45A0CDF198A35340022F8CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B45A0CBD198A35340022F8CD /* OpenDoor */;
+			targetProxy = B45A0CDE198A35340022F8CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B45A0CCA198A35340022F8CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B45A0CCB198A35340022F8CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B45A0CE3198A35340022F8CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B45A0CE4198A35340022F8CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B45A0CE8198A35340022F8CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B45A0CE9198A35340022F8CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B45A0CEB198A35340022F8CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenDoor/OpenDoor-Prefix.pch";
+				INFOPLIST_FILE = "OpenDoor/OpenDoor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B45A0CEC198A35340022F8CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenDoor/OpenDoor-Prefix.pch";
+				INFOPLIST_FILE = "OpenDoor/OpenDoor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B45A0CEE198A35340022F8CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenDoor.app/OpenDoor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenDoor/OpenDoor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OpenDoorTests/OpenDoorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B45A0CEF198A35340022F8CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenDoor.app/OpenDoor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenDoor/OpenDoor-Prefix.pch";
+				INFOPLIST_FILE = "OpenDoorTests/OpenDoorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B45A0CB9198A35340022F8CD /* Build configuration list for PBXProject "OpenDoor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45A0CE8198A35340022F8CD /* Debug */,
+				B45A0CE9198A35340022F8CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45A0CEA198A35340022F8CD /* Build configuration list for PBXNativeTarget "OpenDoor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45A0CEB198A35340022F8CD /* Debug */,
+				B45A0CEC198A35340022F8CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45A0CED198A35340022F8CD /* Build configuration list for PBXNativeTarget "OpenDoorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45A0CEE198A35340022F8CD /* Debug */,
+				B45A0CEF198A35340022F8CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B45A0CB6198A35340022F8CD /* Project object */;
+}
