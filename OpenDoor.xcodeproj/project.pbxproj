@@ -30,7 +30,9 @@
 		B45A0CF9198A36660022F8CD /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B45A0CF8198A36650022F8CD /* libz.1.1.3.dylib */; };
 		B45A0CFE198A37730022F8CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45A0CFC198A37730022F8CD /* LoginViewController.m */; };
 		B45A0CFF198A37730022F8CD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45A0CFD198A37730022F8CD /* LoginViewController.xib */; };
+		B4681B13198E3BC300344953 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B4681B12198E3BC300344953 /* User.m */; };
 		B46E4CCD198A9CB900A60599 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B46E4CCC198A9CB900A60599 /* Util.m */; };
+		B4706DDB198E1B330089B7B8 /* ODPersistent.m in Sources */ = {isa = PBXBuildFile; fileRef = B4706DDA198E1B330089B7B8 /* ODPersistent.m */; };
 		B471F0E4198B909000A95D0B /* btn-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0E0198B909000A95D0B /* btn-bg.png */; };
 		B471F0E5198B909000A95D0B /* btn-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0E1198B909000A95D0B /* btn-bg@2x.png */; };
 		B471F0EE198B996900A95D0B /* work-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0EC198B996900A95D0B /* work-icon.png */; };
@@ -92,8 +94,12 @@
 		B45A0CFB198A37730022F8CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B45A0CFC198A37730022F8CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B45A0CFD198A37730022F8CD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B4681B11198E3BC300344953 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B4681B12198E3BC300344953 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B46E4CCB198A9CB900A60599 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		B46E4CCC198A9CB900A60599 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		B4706DD9198E1B330089B7B8 /* ODPersistent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODPersistent.h; sourceTree = "<group>"; };
+		B4706DDA198E1B330089B7B8 /* ODPersistent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODPersistent.m; sourceTree = "<group>"; };
 		B471F0E0198B909000A95D0B /* btn-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg.png"; sourceTree = "<group>"; };
 		B471F0E1198B909000A95D0B /* btn-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg@2x.png"; sourceTree = "<group>"; };
 		B471F0EC198B996900A95D0B /* work-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "work-icon.png"; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 		B45A0CC7198A35340022F8CD /* OpenDoor */ = {
 			isa = PBXGroup;
 			children = (
+				B4681B0D198E336500344953 /* BL */,
 				B46E4CC7198A9BC100A60599 /* Util */,
 				B45A0CFA198A37680022F8CD /* UI */,
 				B45A0CD0198A35340022F8CD /* AppDelegate.h */,
@@ -259,11 +266,22 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		B4681B0D198E336500344953 /* BL */ = {
+			isa = PBXGroup;
+			children = (
+				B4681B11198E3BC300344953 /* User.h */,
+				B4681B12198E3BC300344953 /* User.m */,
+			);
+			name = BL;
+			sourceTree = "<group>";
+		};
 		B46E4CC7198A9BC100A60599 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				B46E4CCB198A9CB900A60599 /* Util.h */,
 				B46E4CCC198A9CB900A60599 /* Util.m */,
+				B4706DD9198E1B330089B7B8 /* ODPersistent.h */,
+				B4706DDA198E1B330089B7B8 /* ODPersistent.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -433,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4681B13198E3BC300344953 /* User.m in Sources */,
 				B46E4CCD198A9CB900A60599 /* Util.m in Sources */,
 				B45A0CD2198A35340022F8CD /* AppDelegate.m in Sources */,
 				B4DBB2EE198B71B000A9ED32 /* MessagesViewController.m in Sources */,
@@ -441,6 +460,7 @@
 				B45A0CCE198A35340022F8CD /* main.m in Sources */,
 				B45A0CFE198A37730022F8CD /* LoginViewController.m in Sources */,
 				B4082A61198BAFCA0034DF80 /* WorkCell.m in Sources */,
+				B4706DDB198E1B330089B7B8 /* ODPersistent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

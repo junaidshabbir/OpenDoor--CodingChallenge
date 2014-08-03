@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "User.h"
 
 @implementation LoginViewController
 
@@ -34,7 +35,7 @@
                                     block:^(PFUser *user, NSError *error) {
                                         [self endLoginProcess];
                                         if (user) {
-                                            // Do stuff after successful login.
+                                            [self saveLoginUser:user];
                                             [AppDelegate appDelegate].isLogin = true;
                                             [[AppDelegate appDelegate] switchScreen];
                                         } else {
@@ -42,11 +43,30 @@
                                             [Util popupAlert:@"The login failed."];
                                         }
                                     }];
+    
+}
+
+- (void) saveLoginUser:(PFUser*) pfUser {
+    User *user = [[User alloc] init];
+
+    user.objectId = pfUser.objectId;
+    user.mobileNo = [pfUser objectForKey:@"username"];
+    user.firstName = [pfUser objectForKey:@"firstName"];
+    user.lastName = [pfUser objectForKey:@"lastName"];
+    user.accountType = [pfUser objectForKey:@"accountType"];
+    user.accountId = [pfUser objectForKey:@"accountId"];
+    user.home = [pfUser objectForKey:@"home"];
+    user.work = [pfUser objectForKey:@"work"];
+    user.other = [pfUser objectForKey:@"other"];
+    
+    [ODPersistent saveObject:user forKey:KEY_USER];
 }
 
 - (void) startLoginProcess {
     [indicator startAnimating];
     [loginButton setEnabled:false];
+    
+//    [Util putNewDummyData];    
 }
 
 - (void) endLoginProcess {
@@ -57,6 +77,20 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return true;
+}
+
+- (void)saveCustomObject:(User *)object key:(NSString *)key {
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:object];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedObject forKey:key];
+    [defaults synchronize];
+}
+
+- (User *)loadCustomObjectWithKey:(NSString *)key {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:key];
+    User *object = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    return object;
 }
 
 @end
