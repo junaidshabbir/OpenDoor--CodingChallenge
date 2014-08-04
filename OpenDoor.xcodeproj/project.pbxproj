@@ -41,6 +41,10 @@
 		B471F0F3198B9BC400A95D0B /* account-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0F1198B9BC400A95D0B /* account-icon@2x.png */; };
 		B471F0FA198B9C7F00A95D0B /* message-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0F8198B9C7F00A95D0B /* message-icon.png */; };
 		B471F0FB198B9C7F00A95D0B /* message-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B471F0F9198B9C7F00A95D0B /* message-icon@2x.png */; };
+		B476A9E5198F54C9003EBC2A /* ChatDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B476A9E3198F54C9003EBC2A /* ChatDetailCell.m */; };
+		B476A9E6198F54C9003EBC2A /* ChatDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B476A9E4198F54C9003EBC2A /* ChatDetailCell.xib */; };
+		B47AF4EE198F1D7B00BD7FED /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B47AF4EC198F1D7B00BD7FED /* ChatCell.m */; };
+		B47AF4EF198F1D7B00BD7FED /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B47AF4ED198F1D7B00BD7FED /* ChatCell.xib */; };
 		B4A55480198A4D6A003329FE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5547F198A4D6A003329FE /* StoreKit.framework */; };
 		B4A55482198A4D6F003329FE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A55481198A4D6F003329FE /* CoreLocation.framework */; };
 		B4A55484198A4DC8003329FE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A55483198A4DC8003329FE /* MobileCoreServices.framework */; };
@@ -108,6 +112,12 @@
 		B471F0F1198B9BC400A95D0B /* account-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account-icon@2x.png"; sourceTree = "<group>"; };
 		B471F0F8198B9C7F00A95D0B /* message-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message-icon.png"; sourceTree = "<group>"; };
 		B471F0F9198B9C7F00A95D0B /* message-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message-icon@2x.png"; sourceTree = "<group>"; };
+		B476A9E2198F54C9003EBC2A /* ChatDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDetailCell.h; sourceTree = "<group>"; };
+		B476A9E3198F54C9003EBC2A /* ChatDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDetailCell.m; sourceTree = "<group>"; };
+		B476A9E4198F54C9003EBC2A /* ChatDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatDetailCell.xib; sourceTree = "<group>"; };
+		B47AF4EB198F1D7B00BD7FED /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		B47AF4EC198F1D7B00BD7FED /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		B47AF4ED198F1D7B00BD7FED /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		B4A5547F198A4D6A003329FE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B4A55481198A4D6F003329FE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B4A55483198A4DC8003329FE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -286,6 +296,19 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		B47AF4EA198F1D3E00BD7FED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B47AF4EB198F1D7B00BD7FED /* ChatCell.h */,
+				B47AF4EC198F1D7B00BD7FED /* ChatCell.m */,
+				B47AF4ED198F1D7B00BD7FED /* ChatCell.xib */,
+				B476A9E2198F54C9003EBC2A /* ChatDetailCell.h */,
+				B476A9E3198F54C9003EBC2A /* ChatDetailCell.m */,
+				B476A9E4198F54C9003EBC2A /* ChatDetailCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		B484D57B198B5D7800CF2B13 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +358,7 @@
 		B4DBB2E0198B715200A9ED32 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				B47AF4EA198F1D3E00BD7FED /* Cell */,
 				B4DBB2EB198B71B000A9ED32 /* MessagesViewController.h */,
 				B4DBB2EC198B71B000A9ED32 /* MessagesViewController.m */,
 				B4DBB2ED198B71B000A9ED32 /* MessagesViewController.xib */,
@@ -389,6 +413,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Junaid's";
 				TargetAttributes = {
+					B45A0CBD198A35340022F8CD = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					B45A0CD8198A35340022F8CD = {
 						TestTargetID = B45A0CBD198A35340022F8CD;
 					};
@@ -417,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B476A9E6198F54C9003EBC2A /* ChatDetailCell.xib in Resources */,
 				B4A5548E198A5088003329FE /* Entitlements.plist in Resources */,
 				B45A0CCC198A35340022F8CD /* InfoPlist.strings in Resources */,
 				B471F0E4198B909000A95D0B /* btn-bg.png in Resources */,
@@ -429,6 +461,7 @@
 				B4DBB2EF198B71B000A9ED32 /* MessagesViewController.xib in Resources */,
 				B471F0FB198B9C7F00A95D0B /* message-icon@2x.png in Resources */,
 				B4DBB2EA198B71A300A9ED32 /* AccountViewController.xib in Resources */,
+				B47AF4EF198F1D7B00BD7FED /* ChatCell.xib in Resources */,
 				B471F0F2198B9BC400A95D0B /* account-icon.png in Resources */,
 				B471F0EF198B996900A95D0B /* work-icon@2x.png in Resources */,
 				B45A0CFF198A37730022F8CD /* LoginViewController.xib in Resources */,
@@ -456,10 +489,12 @@
 				B45A0CD2198A35340022F8CD /* AppDelegate.m in Sources */,
 				B4DBB2EE198B71B000A9ED32 /* MessagesViewController.m in Sources */,
 				B4082A5B198BA6030034DF80 /* WorkViewController.m in Sources */,
+				B47AF4EE198F1D7B00BD7FED /* ChatCell.m in Sources */,
 				B4DBB2E9198B71A300A9ED32 /* AccountViewController.m in Sources */,
 				B45A0CCE198A35340022F8CD /* main.m in Sources */,
 				B45A0CFE198A37730022F8CD /* LoginViewController.m in Sources */,
 				B4082A61198BAFCA0034DF80 /* WorkCell.m in Sources */,
+				B476A9E5198F54C9003EBC2A /* ChatDetailCell.m in Sources */,
 				B4706DDB198E1B330089B7B8 /* ODPersistent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

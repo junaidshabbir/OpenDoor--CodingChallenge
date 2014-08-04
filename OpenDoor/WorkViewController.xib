@@ -140,7 +140,7 @@
                                 <action selector="onClickActionButton:" destination="-1" eventType="touchUpInside" id="4l0-yP-C4n"/>
                             </connections>
                         </button>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="M1n-Ox-IMw">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="M1n-Ox-IMw">
                             <rect key="frame" x="12" y="139" width="288" height="95"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

@@ -11,6 +11,5 @@
 @interface Util : NSObject
 
 + (void) popupAlert: (NSString*) message;
-+ (void) putNewDummyData;
     
 @end

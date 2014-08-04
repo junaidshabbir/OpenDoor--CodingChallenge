@@ -65,8 +65,6 @@
 - (void) startLoginProcess {
     [indicator startAnimating];
     [loginButton setEnabled:false];
-    
-//    [Util putNewDummyData];    
 }
 
 - (void) endLoginProcess {

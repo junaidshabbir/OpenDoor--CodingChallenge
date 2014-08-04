@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>22D78E68-2355-4AB4-AE1C-2C3125A17243</string>
+	<string>C320DA99-31C9-4599-829F-2CCDA8F78CEB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>OpenDoor</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9B324EDB-033E-4E97-B51B-D1D31B1B6CF8</key>
-		<string>https://bitbucket.org/junaidshabbir/iosopendoor.git</string>
+		<key>A462B80F-8005-42E2-9C93-85F0CC8C74D7</key>
+		<string>https://github.com/junaidshabbir/OpenDoor--CodingChallenge.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>OpenDoor.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9B324EDB-033E-4E97-B51B-D1D31B1B6CF8</key>
+		<key>A462B80F-8005-42E2-9C93-85F0CC8C74D7</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/junaidshabbir/iosopendoor.git</string>
+	<string>https://github.com/junaidshabbir/OpenDoor--CodingChallenge.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9B324EDB-033E-4E97-B51B-D1D31B1B6CF8</string>
+	<string>A462B80F-8005-42E2-9C93-85F0CC8C74D7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9B324EDB-033E-4E97-B51B-D1D31B1B6CF8</string>
+			<string>A462B80F-8005-42E2-9C93-85F0CC8C74D7</string>
 			<key>IDESourceControlWCCName</key>
 			<string>OpenDoor</string>
 		</dict>
