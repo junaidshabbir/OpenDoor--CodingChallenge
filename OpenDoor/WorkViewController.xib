@@ -11,6 +11,7 @@
                 <outlet property="lblEarn" destination="iyL-ee-DMW" id="zSd-vs-t9g"/>
                 <outlet property="lblExpiresOn" destination="FrN-lI-bRe" id="J8w-kd-HSR"/>
                 <outlet property="lblPostedOn" destination="5MJ-56-VLb" id="raf-nA-yWw"/>
+                <outlet property="lblTaskNotAvailable" destination="KnW-z3-t5J" id="09I-RG-GsV"/>
                 <outlet property="lblTitle" destination="9BB-6T-C5e" id="d1z-ib-lh6"/>
                 <outlet property="mainBodyView" destination="lSe-CR-kH4" id="bd0-wv-6y6"/>
                 <outlet property="tableView" destination="WZQ-1Q-dEU" id="c9a-dr-D1B"/>
@@ -43,8 +44,15 @@
                         <action selector="onSegmentValueChange:" destination="-1" eventType="valueChanged" id="lep-BU-fz5"/>
                     </connections>
                 </segmentedControl>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks are not Available to work!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KnW-z3-t5J">
+                    <rect key="frame" x="11" y="79" width="308" height="12"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.43359375" green="0.0" blue="0.0047049285289999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="WZQ-1Q-dEU">
-                    <rect key="frame" x="0.0" y="84" width="320" height="346"/>
+                    <rect key="frame" x="0.0" y="96" width="320" height="334"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>

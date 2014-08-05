@@ -12,6 +12,7 @@
 @interface WorkViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *availableObjects;
     NSMutableArray *reservedObjects;
+    NSMutableArray *completedObjects;
 }
 
 @property (retain, nonatomic) IBOutlet UISegmentedControl *customSegment;
@@ -27,12 +28,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblExpiresOn;
 @property (weak, nonatomic) IBOutlet UIButton *btnAction;
 @property (weak, nonatomic) IBOutlet UITextView *tvDesc;
+@property (weak, nonatomic) IBOutlet UILabel *lblTaskNotAvailable;
 
 - (IBAction)onClickActionButton:(id)sender;
 - (IBAction)onSegmentValueChange:(id)sender;
 - (IBAction)onClickBack:(id)sender;
 
 
+#define KEY_WORKER_ID       @"workerId"
 #define KEY_TITLE           @"title"
 #define KEY_MODE            @"mode"
 #define KEY_DESC            @"desc"
@@ -45,9 +48,14 @@
 #define CLASS_TASK          @"Task"
 #define TASK_AVAILABLE      @"AVAILABLE"
 #define TASK_RESERVED       @"RESERVED"
-#define TASK_START          @"START"
+#define TASK_START          @"STARTED"
+#define TASK_COMPLETED      @"COMPLETED"
 
 #define BUTTON_START        @"Start"
 #define BUTTON_COMPLETED    @"Completed"
+
+#define SEGMENT_AVAILABLE   @"Available"
+#define SEGMENT_COMPLETED   @"Completed"
+
 
 @end

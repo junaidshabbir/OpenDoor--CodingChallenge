@@ -23,6 +23,7 @@ int fetchedDataCount = 0;
 UIView *footerLoadingView;
 PFObject *selectedTask;
 User *user;
+BOOL isAnyTaskModified;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +32,7 @@ User *user;
         // Custom initialization
         availableObjects = [[NSMutableArray alloc] init];
         reservedObjects = [[NSMutableArray alloc] init];
+        completedObjects = [[NSMutableArray alloc] init];
         user = [ODPersistent getObjectForKey:KEY_USER];
     }
     return self;
@@ -60,6 +62,7 @@ User *user;
     self.taskDetailView.hidden = false;
     [self.mainBodyView addSubview:self.taskDetailView];
     self.taskListView.hidden = true;
+    isAnyTaskModified = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,11 +73,20 @@ User *user;
 
 - (void) queryTaskObjects:(int) firstSkipCount {
     [self startLoading];
-    PFQuery *query = [PFQuery queryWithClassName:CLASS_TASK];
+
+    PFQuery *query = [self getCombineQueryForAvailableAndReservedTasks];
     query.limit = TASK_CHUNK_LIMIT;
     query.skip = firstSkipCount;
     [query whereKey:KEY_IS_ACTIVE equalTo:@YES];
     [query whereKey:KEY_EXPIRY_DATE greaterThan:[NSDate date]];
+    [query orderByDescending:@"updatedAt"];
+    
+    if(firstSkipCount == 0) {
+        [availableObjects removeAllObjects];
+        [reservedObjects removeAllObjects];
+        [self.tableView reloadData];
+        fetchedDataCount = 0;
+    }
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         [self stopLoading];
         if (!error) {
@@ -88,12 +100,38 @@ User *user;
             }
             fetchedDataCount += [objects count];
             [self.tableView reloadData];
+            if([availableObjects count] == 0) { // Tasks are not available, so we have to show Complete tasks if any.
+                [self.lblTaskNotAvailable setHidden:false];
+                [self queryCompletedTaskObjects];
+            }
+            else if([[self.customSegment titleForSegmentAtIndex:0] isEqual: SEGMENT_COMPLETED]) {
+                [self.lblTaskNotAvailable setHidden:true];
+                [self.customSegment setTitle:SEGMENT_AVAILABLE forSegmentAtIndex:0];            
+            }
+        }
+    }];
+}
+
+- (void) queryCompletedTaskObjects {
+    [self startLoading];
+    
+    PFQuery *query = [PFQuery queryWithClassName:CLASS_TASK];
+    [query whereKey:KEY_IS_ACTIVE equalTo:@YES];
+    [query whereKey:KEY_MODE equalTo:TASK_COMPLETED];
+    [query whereKey:KEY_WORKER_ID equalTo:user.objectId];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        [self stopLoading];
+        if (!error && [objects count] > 0) {
+            completedObjects = [[NSMutableArray alloc]initWithArray:objects];
+            [self.customSegment setTitle:SEGMENT_COMPLETED forSegmentAtIndex:0];
+            [self.tableView reloadData];
         }
     }];
 }
 
 - (void) fetchTasksCount {
-    PFQuery *query = [PFQuery queryWithClassName:CLASS_TASK];
+    PFQuery *query = [self getCombineQueryForAvailableAndReservedTasks];
     [query whereKey:KEY_IS_ACTIVE equalTo:@YES];
     [query whereKey:KEY_EXPIRY_DATE greaterThan:[NSDate date]];
     [query countObjectsInBackgroundWithBlock:^(int count, NSError *error) {
@@ -101,6 +139,16 @@ User *user;
             totalDataCount = count;
         }
     }];
+}
+
+- (PFQuery *) getCombineQueryForAvailableAndReservedTasks {
+    PFQuery *available = [PFQuery queryWithClassName:CLASS_TASK];
+    [available whereKey:KEY_MODE equalTo:TASK_AVAILABLE];
+    
+    PFQuery *reserved = [PFQuery queryWithClassName:CLASS_TASK];
+    [reserved whereKey:KEY_MODE equalTo:TASK_RESERVED];
+    
+    return [PFQuery orQueryWithSubqueries:@[available,reserved]];
 }
 
 - (void) onSegmentValueChange:(id)sender {
@@ -117,7 +165,11 @@ User *user;
 
 - (NSMutableArray*) getVisibleArray {
     if (self.customSegment.selectedSegmentIndex == 0) {
-        return availableObjects;
+        if([availableObjects count] > 0) {
+            return availableObjects;
+        } else {
+            return completedObjects;
+        }
     }
     else {
         return reservedObjects;
@@ -200,14 +252,15 @@ User *user;
     if([button.titleLabel.text isEqualToString:BUTTON_START]){
         if([[selectedTask objectForKey:KEY_MODE] isEqual: TASK_AVAILABLE]) {
             [self updateViewOnTaskStart];
-            [self updateTask:selectedTask Mode: TASK_START];
+            [self updateTask:selectedTask Mode: TASK_START WorkerId:user.objectId];
         } else {
-            [Util popupAlert:@"Task can't started as it is alredy Reseved."];
+            NSString *msg = [NSString stringWithFormat:@"Task is not available to start. It's already %@",[selectedTask objectForKey:KEY_MODE]];
+            [Util popupAlert:msg];
         }
     }
     else{
         [self updateViewOnTaskCompleted];
-        [self updateTask:selectedTask Mode: TASK_AVAILABLE];
+        [self updateTask:selectedTask Mode: TASK_COMPLETED WorkerId:nil];
     }
 }
 
@@ -221,11 +274,15 @@ User *user;
     [self setTabBarEnabled:true];
 }
 
-- (void) updateTask:(PFObject *)task Mode:(NSString *)mode {
+- (void) updateTask:(PFObject *)task Mode:(NSString *)mode WorkerId:(NSString *) workerId {
     //Note: So far below is not a syncronized process. For multiple users, we should first retrived an updated object (using objectId) from CMS then checked it's availablity and then updated its mode to start.
-    
+
+    if(workerId != nil) {
+        task[KEY_WORKER_ID] = workerId;
+    }
     task[KEY_MODE] = mode;
     [task saveInBackground];
+    isAnyTaskModified = true;
 }
 
 - (void) setTabBarEnabled:(BOOL) enabled {
@@ -235,7 +292,7 @@ User *user;
 
 - (IBAction)onClickBack:(id)sender {
     if([self.btnAction.titleLabel.text isEqualToString:BUTTON_START]) {
-        if(totalDataCount == 0) {
+        if(totalDataCount == 0 || isAnyTaskModified) {
             [self initTaskList];
         } else {
             [self addTaskListView];
@@ -249,6 +306,7 @@ User *user;
     PFQuery *query = [PFQuery queryWithClassName:CLASS_TASK];
     query.limit = 1;
     [query whereKey:KEY_MODE equalTo:TASK_START];
+    [query whereKey:KEY_WORKER_ID equalTo:user.objectId];
     [self startLoading];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         [self stopLoading];
